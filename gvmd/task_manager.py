@@ -40,7 +40,7 @@ class Task():
         :return:
         """
         params = dict(name="扫描目标-" + self.ud,
-                      make_unique=True,
+                      # make_unique=True,
                       asset_hosts_filter=None,
                       hosts=self.hosts,
                       comment="创建目标",
@@ -49,7 +49,7 @@ class Task():
                       reverse_lookup_only=None,
                       reverse_lookup_unify=None,
                       port_range=None,
-                      port_list_id="33d0cd82-57c6-11e1-8ed1-406186ea4fc5"
+                      port_list_id="da92d575-e96c-46e7-b3f6-7f104abebddf"
                       )
         _datas = OpenVASTool().push_command("create_target", params)
         return _datas["@id"]
